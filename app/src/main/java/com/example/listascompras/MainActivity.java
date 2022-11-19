@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = (ListView)findViewById(R.id.listview);
-        footer = (TextView)findViewById(R.id.footer);
+        listView = (ListView) findViewById(R.id.listview);
+        footer = (TextView) findViewById(R.id.footer);
         editText = (EditText) findViewById(R.id.edittext);
         checkBox = (CheckBox) findViewById(R.id.checkboxZ);
         spinner = (Spinner) findViewById(R.id.spinner);
@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                                 produtos.remove(localPosition);
                                 arrayAdapter.notifyDataSetChanged();
                                 updateFooter();
-                            }}).setNegativeButton(android.R.string.no, null).show();
+                            }
+                        }).setNegativeButton(android.R.string.no, null).show();
                 return true;
             }
         };
@@ -68,21 +69,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Atualizar informações Soma
-    public void updateFooter(){
+    public void updateFooter() {
         float total = 0;
         float urgente = 0;
-        for(int i = 0; i < produtos.size(); i++){
+        for (int i = 0; i < produtos.size(); i++) {
             Produto produto = produtos.get(i);
-            if(produto.isUrgente()){
+            if (produto.isUrgente()) {
                 urgente += produto.getPreco();
             }
             total += produto.getPreco();
         }
-        footer.setText("Total = "+total+ " : Urgente = "+urgente);
+        footer.setText("Total = " + total + " : Urgente = " + urgente);
     }
 
     //Adicionar um item na listView
-    public void addProduto(View view){
+    public void addProduto(View view) {
+
+        //Recuperar o item selecionado no Spinner(similar ao comboBox).
         String item = String.valueOf(spinner.getSelectedItem());
         boolean checked = checkBox.isChecked();
         float preco = Float.parseFloat(editText.getText().toString());

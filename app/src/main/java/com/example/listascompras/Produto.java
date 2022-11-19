@@ -11,6 +11,8 @@ public class Produto {
         this.urgente = urgente;
     }
 
+    public Produto(){}
+
     public float getPreco() {
         return preco;
     }
