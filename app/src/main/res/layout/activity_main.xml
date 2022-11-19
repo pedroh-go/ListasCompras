@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -13,25 +12,25 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
     <TextView
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:background="@color/ph_color"
         android:gravity="center_horizontal"
         android:text="@string/soma"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="152dp"
-        android:layout_weight="1"></ListView>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="237dp"
         android:orientation="horizontal">
 
         <Spinner
@@ -39,26 +38,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:entries="@array/produtos"/>
+            android:entries="@array/produtos" />
 
         <EditText
             android:id="@+id/edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/preco" />
+            android:hint="@string/preco"
+            android:autofillHints=""
+            android:inputType="text" />
 
         <CheckBox
             android:id="@+id/checkboxZ"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clique"
             android:onClick="addProduto"
-            android:textColor="#FFFFFF"/>
+            android:text="@string/clique"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </LinearLayout>

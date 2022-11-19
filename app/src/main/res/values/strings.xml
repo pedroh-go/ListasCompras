@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ListasCompras</string>
     <string name="soma">Soma = 0.00 : Urgente = 0.00</string>
+    <string name="clique">Clique</string>
     <string name="preco">Preço</string>
     <string-array name="produtos">
         <item>Laranja</item>

@@ -76,14 +76,14 @@ public class MainActivity extends AppCompatActivity {
             if(produto.isUrgente()){
                 urgente += produto.getPreco();
             }
-            total +=produto.getPreco();
+            total += produto.getPreco();
         }
         footer.setText("Total = "+total+ " : Urgente = "+urgente);
     }
 
     //Adicionar um item na listView
     public void addProduto(View view){
-        String item = String.valueOf(spinner.getSelectedItemId());
+        String item = String.valueOf(spinner.getSelectedItem());
         boolean checked = checkBox.isChecked();
         float preco = Float.parseFloat(editText.getText().toString());
 
